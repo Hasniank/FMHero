@@ -1,1 +1,1 @@
-export * from './loadingScreen'
+export * from './LandingLoadingScreen'

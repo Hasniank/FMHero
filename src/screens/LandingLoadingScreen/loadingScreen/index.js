@@ -1,13 +1,14 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, ImageBackground} from 'react-native';
 import React from 'react';
-import {IMAGE} from '../../assets';
-import {SCREENS} from '../../commons/Screenlayouts';
+import {IMAGE} from '../../../assets';
+import {SCREENS} from '../../../commons';
 
 export const SplashScreen = () => {
   return (
-    <View style={styles.container}>
-      <Image source={IMAGE.IMAGES.LoadingImage} style={styles.img} />
-    </View>
+    <ImageBackground
+      source={IMAGE.IMAGES.LoadingImage}
+      style={styles.img}
+      resizeMode="cover"></ImageBackground>
   );
 };
 
