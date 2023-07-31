@@ -6,7 +6,8 @@ const IMAGES = {
   GoogleLogo:require('./Images/googleLogo.png'),
   AppleLogo:require('./Images/appleLogo.png'),
   FacebookLogo:require('./Images/facebookLogo.png'),
-  BottomLogo:require('./Images/bottomLogo.png')
+  BottomLogo:require('./Images/bottomLogo.png'),
+  Hero:require('./Images/hero.png')
 };
 
 export const IMAGE = {

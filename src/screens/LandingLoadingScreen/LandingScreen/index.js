@@ -33,7 +33,7 @@ export const LandingScreen = ({navigation}) => {
           color={'#fff'}
           top={20}
           onPress={() => {
-            Alert.alert('Login');
+            navigation.navigate('login');
           }}
         />
         <View style={Styles().footerView}>

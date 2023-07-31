@@ -1,18 +1,19 @@
-import {Text, View, TouchableOpacity, Image} from 'react-native';
-import React from 'react';
-import {Styles} from './Styles';
-import {Button, Header, SCREENS} from '../../commons';
-import {IMAGE} from '../../assets';
+import { View, Text,TouchableOpacity ,Image} from 'react-native'
+import React from 'react'
+import { Button, Header, SCREENS } from '../../commons'
+import { IMAGE } from '../../assets'
+import { Styles } from './Styles'
 
-export const CreateAccount = ({navigation}) => {
+
+
+const Login = ({navigation}) => {
   return (
     <View style={Styles().container}>
       <View style={Styles().container1}>
         <Header
-        text={'Hero Activation'}
+        text={'Suit Up'}
           onPress={() => {
             navigation.navigate('landing');
-            
           }}
         />
         <Button
@@ -24,7 +25,7 @@ export const CreateAccount = ({navigation}) => {
           color={'#FFF'}
           // top={20}
           onPress={() => {
-            navigation.navigate('emailSignUp');
+            navigation.navigate('EmailLogin');
           }}
         />
         <TouchableOpacity style={Styles().button}>
@@ -56,5 +57,7 @@ export const CreateAccount = ({navigation}) => {
         <Image source={IMAGE.IMAGES.BottomLogo} />
       </View>
     </View>
-  );
-};
+  )
+}
+
+export default Login

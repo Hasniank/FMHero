@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SplashScreen} from '../../screens/LandingLoadingScreen/loadingScreen/index.js';
-import {EmailSignUp, LandingScreen} from '../../screens';
+import {EmailSignUp, LandingScreen, SignUpSuccess} from '../../screens';
 import {NavigationContainer} from '@react-navigation/native';
 import {CreateAccount} from '../../screens/CreateAccount/CreateAccount.js';
-
+import Login from '../../screens/Login/Login.js';
+import { EmailLogin } from '../../screens/Login/EmailLogin.js';
 
 const Stack = createNativeStackNavigator();
 export const MyStack = () => {
@@ -26,8 +27,10 @@ export const MyStack = () => {
           <Stack.Screen name="landing" component={LandingScreen} />
         )}
         <Stack.Screen name="createAccount" component={CreateAccount} />
-        {/* <Stack.Screen name="emailSignUp" component={EmailSignUp} /> */}
-        <Stack.Screen name='emailSignUp' component={EmailSignUp}/>
+        <Stack.Screen name="emailSignUp" component={EmailSignUp} />
+        <Stack.Screen name="SignUpSuccess" component={SignUpSuccess} />
+        <Stack.Screen name="login" component={Login} />
+        <Stack.Screen name='EmailLogin' component={EmailLogin}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

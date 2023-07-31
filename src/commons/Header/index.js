@@ -3,13 +3,13 @@ import React from 'react';
 import {IMAGE} from '../../assets';
 import {SCREENS} from '../ScreenLayouts';
 
-export const Header = ({onPress}) => {
+export const Header = ({onPress,text}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
         <Image source={IMAGE.IMAGES.LEFT} />
       </TouchableOpacity>
-      <Text style={styles.text}>Hero Activation</Text>
+      <Text style={styles.text}>{text}</Text>
       <View></View>
     </View>
   );

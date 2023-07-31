@@ -1,15 +1,15 @@
-import {StyleSheet, Text, View, Image, TextInput} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text, TextInput, Image} from 'react-native';
+import React from 'react';
 import {Styles} from './Styles';
 import {Button, Header, SCREENS} from '../../commons';
 import {IMAGE} from '../../assets';
 
-export const EmailSignUp = ({navigation}) => {
+export const EmailLogin = () => {
   return (
     <View style={Styles().container}>
       <View style={Styles().container1}>
         <Header
-        text={'Hero Activation'}
+          text={'Suit Up'}
           onPress={() => {
             navigation.navigate('landing');
           }}
@@ -17,7 +17,7 @@ export const EmailSignUp = ({navigation}) => {
         <TextInput placeholder="Email Address" style={Styles().textInput} />
         <TextInput placeholder="Password" style={Styles().textInput} />
         <TextInput placeholder="Confirm Password" style={Styles().textInput} />
-        <Text>Password requirement: 20 characters or more</Text>
+        <Text>Forgot your password?</Text>
         <Button
           width={SCREENS.screenWidth * 0.85}
           backgroundColor={'#00854A'}
@@ -36,5 +36,3 @@ export const EmailSignUp = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
