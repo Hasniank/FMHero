@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-// import NavigationContainer from '@react-navigation/native/lib/typescript/src/NavigationContainer';
+import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SplashScreen} from '../../screens/LandingLoadingScreen/loadingScreen/index.js';
-import {LandingScreen} from '../../screens';
+import {EmailSignUp, LandingScreen} from '../../screens';
 import {NavigationContainer} from '@react-navigation/native';
+import {CreateAccount} from '../../screens/CreateAccount/CreateAccount.js';
+
 
 const Stack = createNativeStackNavigator();
 export const MyStack = () => {
@@ -24,6 +25,9 @@ export const MyStack = () => {
         ) : (
           <Stack.Screen name="landing" component={LandingScreen} />
         )}
+        <Stack.Screen name="createAccount" component={CreateAccount} />
+        {/* <Stack.Screen name="emailSignUp" component={EmailSignUp} /> */}
+        <Stack.Screen name='emailSignUp' component={EmailSignUp}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
