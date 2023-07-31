@@ -1,10 +1,17 @@
-import {View, Text, TextInput, Image} from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  Image,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {Styles} from './Styles';
 import {Button, Header, SCREENS} from '../../commons';
 import {IMAGE} from '../../assets';
 
-export const EmailLogin = () => {
+export const EmailLogin = ({navigation}) => {
   return (
     <View style={Styles().container}>
       <View style={Styles().container1}>
@@ -16,17 +23,21 @@ export const EmailLogin = () => {
         />
         <TextInput placeholder="Email Address" style={Styles().textInput} />
         <TextInput placeholder="Password" style={Styles().textInput} />
-        <TextInput placeholder="Confirm Password" style={Styles().textInput} />
-        <Text>Forgot your password?</Text>
+        
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate('ForgotPw')
+        }}>
+          <Text style={Styles().forgetText}>Forgot your password?</Text>
+        </TouchableOpacity>
         <Button
           width={SCREENS.screenWidth * 0.85}
           backgroundColor={'#00854A'}
           height={SCREENS.screenHeight * 0.06}
           borderRadius={10}
-          text={'Activate Hero'}
+          text={'Login'}
           color={'#fff'}
           onPress={() => {
-            navigation.navigate('SignUpSuccess');
+            Alert.alert('Login');
           }}
         />
       </View>

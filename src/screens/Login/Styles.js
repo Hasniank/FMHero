@@ -35,4 +35,7 @@ export const Styles = () =>
       borderColor: '#EDEDED',
       paddingLeft: 20,
     },
+    forgetText:{
+        color:'#148352'
+    }
   });

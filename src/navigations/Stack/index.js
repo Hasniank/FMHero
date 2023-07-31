@@ -7,6 +7,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {CreateAccount} from '../../screens/CreateAccount/CreateAccount.js';
 import Login from '../../screens/Login/Login.js';
 import { EmailLogin } from '../../screens/Login/EmailLogin.js';
+import { ForgotPW } from '../../screens/Login/ForgotPW.js';
 
 const Stack = createNativeStackNavigator();
 export const MyStack = () => {
@@ -31,6 +32,7 @@ export const MyStack = () => {
         <Stack.Screen name="SignUpSuccess" component={SignUpSuccess} />
         <Stack.Screen name="login" component={Login} />
         <Stack.Screen name='EmailLogin' component={EmailLogin}/>
+        <Stack.Screen name='ForgotPw' component={ForgotPW}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
